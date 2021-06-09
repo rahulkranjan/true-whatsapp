@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>True Whatsapp</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="newsletter">
+    <h1>
+      Whatsapp
+      <span>Text</span>
+    </h1>
+
+    <p>Send message without saving contect.</p>
+    <p></p>
+
+    <div class="txtb">
+      <input type="text" placeholder="Enter the phone number" name="comments" id="comment">
+      <button type="button" onclick="clickyClick()"><i class="fas fa-arrow-right"></i></button>
+
+    </div>
+  </div>
+  <!-- partial -->
+  <script type='text/javascript'>
+    function clickyClick() {
+      url = 'http://wa.me/91' + document.getElementById("comment").value
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+
+</html>
