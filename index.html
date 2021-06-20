@@ -155,10 +155,14 @@
 
     <div class="txtb">
       <input type="password" placeholder="Enter the phone number" name="comments" id="comment" />
+
       <button type="button" onclick="clickyClick()">
+
         <i class="fas fa-arrow-right"></i>
       </button>
+
     </div>
+    <input type="checkbox" onclick="myFunction()">
   </div>
   <div class="footer">
     <p style="padding: 10px">
@@ -173,6 +177,14 @@
     function clickyClick() {
       url = 'http://wa.me/91' + document.getElementById("comment").value
       window.open(url, '_blank');
+    }
+    function myFunction() {
+      var x = document.getElementById("comment");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
     }
   </script>
 </body>
