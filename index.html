@@ -139,17 +139,11 @@
       }
     }
   </style>
-
-
-
-
 </head>
 
 <body>
   <div class="newsletter">
-    <h1>
-      Chat Go
-    </h1>
+    <h1>Chat Go</h1>
 
     <p>Send WhatsApp message without saving contact.</p>
 
@@ -157,12 +151,9 @@
       <input type="password" placeholder="Enter the phone number" name="comments" id="comment" />
 
       <button type="button" onclick="clickyClick()">
-
         <i class="fas fa-arrow-right"></i>
       </button>
-
     </div>
-    <input type="checkbox" onclick="myFunction()">
   </div>
   <div class="footer">
     <p style="padding: 10px">
@@ -175,16 +166,8 @@
   <!-- <script src="script.js" type="text/javascript"></script> -->
   <script>
     function clickyClick() {
-      url = 'http://wa.me/91' + document.getElementById("comment").value
-      window.open(url, '_blank');
-    }
-    function myFunction() {
-      var x = document.getElementById("comment");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
+      url = "http://wa.me/91" + document.getElementById("comment").value;
+      window.open(url, "_blank");
     }
   </script>
 </body>
