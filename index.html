@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Go</title>
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
   <!-- <link rel="stylesheet" href="style.css" /> -->
   <style>
@@ -192,6 +193,15 @@
       url = "http://wa.me/91" + document.getElementById("comment").value;
       window.open(url, "_blank");
     }
+    if ('serviceWorker' in navigator) {
+      console.log("Will the service worker register?");
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(reg){
+          console.log("Yes, it did.");
+       }).catch(function(err) {
+          console.log("No it didn't. This happened:", err)
+      });
+   }
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
